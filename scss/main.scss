@@ -6,3 +6,59 @@
     padding: 0;
 }
 
+.hero{
+    background: rgb(255,143,112);
+    background: linear-gradient(177deg, rgba(255,143,112,1) 0%, rgba(255,61,84,1) 80%); 
+    border-bottom-left-radius: 100px;
+    overflow: hidden;
+    &__nav{
+        height: 30px;
+        img{
+            max-width: 100%;
+        }
+    }
+    &__wrapper{
+        background-image: url(/images/bg-pattern-intro-mobile.svg);
+        background-size: 250%;
+        background-position: 35% 35%;
+    }
+    &__content{
+        color: white;
+        padding: 7rem 0;
+        &__title{
+            h1{
+                font-size: clamp(30px, 7vw, 40px);
+                padding-bottom: .3rem;
+            }
+            p{
+                color: rgba(255, 255, 255, 0.838);
+            }
+        }
+        &__links{
+            flex-direction: column;
+            padding: 2rem 0;
+            a{
+                text-decoration: none;
+                font-weight: bold;
+                text-align: center;
+                padding: .5em .7em;
+                border-radius: 25px;
+                margin:.3rem;
+            }
+            .start{
+                color:$very-light-red;
+                background-color: white;
+                border: 2px solid white;
+            }
+            .info{
+                color: white;
+                border: 2px solid rgba(255, 255, 255, 0.588);
+            }
+            @media screen and (min-width: 350px) {
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+    
