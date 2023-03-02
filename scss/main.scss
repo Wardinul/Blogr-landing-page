@@ -6,9 +6,13 @@
     padding: 0;
 }
 
+img{
+    max-width: 100%;
+}
+
 .page{
     background-color: white;
-    height: 200vh;
+    height: 300vh;
     &__header{
         position: absolute;
         width: 100%;
@@ -18,13 +22,68 @@
             width: 100%;
             .menu{
                 position: relative;
-                height: 26px;
+                height: 24px;
                 width: 40px;
                 img{
                     height: 100%;
                     max-width: 100%;
                 }
             }
+            .account-log{
+                button{
+                    border: none;
+                    border-radius: 30px;
+                    padding: .4em 1.5em;
+                    font-weight: 600;
+                    font-size: 13px;
+                }
+                .login{
+                    background: none;
+                    color: white;
+                }
+                .sign-up{
+                    background-color: white;
+                    color: $light-red;
+                }
+            }
+        }
+    }
+    .hero-wrapper{
+        position: relative;
+        min-height: 60vh;
+        padding: 4.5rem 0;
+        background: rgb(255,143,112);
+        background: linear-gradient(177deg, rgba(255,143,112,1) 0%, rgba(255,61,84,1) 90%); 
+        border-bottom-left-radius: 100px;
+        overflow: hidden;
+
+        @media screen and (min-width: 576px) {
+            border-bottom-left-radius: 50px;
+        }
+
+        @media screen and (min-width:768px) {
+            background: rgb(255,143,112);
+            background: linear-gradient(87deg, rgba(255,143,112,1) 0%, rgba(255,96,96,1) 67%, rgba(255,61,84,1) 100%); 
+        }
+    }
+    .hero-bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(/images/bg-pattern-intro-mobile.svg);
+        background-size: 350%;
+        background-position: 35% 42%;
+        background-repeat: no-repeat;
+
+        @media screen and (min-width: 576px) {
+            background-position: 35% 45%;
+            background-size: 200%;
+        }
+
+        @media screen and (min-width: 768px) {
+            background-image: url(/images/bg-pattern-intro-desktop.svg);
+            background-size: 200%;
+            background-position: 30% 52%;
         }
     }
     &__hero{
@@ -46,7 +105,7 @@
                 text-decoration: none;
                 font-weight: bold;
                 text-align: center;
-                padding: .5em .7em;
+                padding: .3em .6em;
                 border-radius: 25px;
                 margin:.5rem;
             }
@@ -64,22 +123,25 @@
             }
         }
     }
-    .hero-wrapper{
-        position: relative;
-        height: 60vh;
-        background: rgb(255,143,112);
-        background: linear-gradient(177deg, rgba(255,143,112,1) 0%, rgba(255,61,84,1) 90%); 
-        border-bottom-left-radius: 100px;
-        overflow: hidden;
-    }
-    .hero-bg{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-image: url(/images/bg-pattern-intro-mobile.svg);
-        background-size: 300%;
-        background-position: 35% 35%;
-        background-repeat: no-repeat;
+    &__content{
+        .design{
+            &__title{
+                color: $very-dark-grayish-blue;
+            }
+            &__info{
+                &__card{
+                    h2{
+                        max-width: 250px;
+                        color: $very-dark-grayish-blue;
+                    }
+                    p{
+                        padding: 1em 0;
+                        color: hsla(240, 10%, 16%, 0.568);
+                        max-width: 450px;
+                    }
+                }
+            }
+        }
     }
 }
 
